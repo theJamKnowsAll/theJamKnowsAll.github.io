@@ -50,35 +50,7 @@
 	<div id="upper-left">
 		<div id="clock"></div> <!-- Including the date/time-script -->
 	</div>
-	<div id="upper-right">
-		<h2>...</h2>
-		<?php // Code for getting the RSS-news-feed
-			$rss = new DOMDocument();
-			$rss->load('http://feeds.idg.se/idg/vzzs'); // Specify the address to the feed
-			$feed = array();
-				foreach ($rss->getElementsByTagName('item') as $node) {
-					$item = array (
-					'title' => $node->getElementsByTagName('title')->item(0)->nodeValue,
-					'desc' => $node->getElementsByTagName('description')->item(0)->nodeValue,
-					'date' => $node->getElementsByTagName('pubDate')->item(0)->nodeValue,
-					);
-				array_push($feed, $item);
-				}
-   
-		$limit = 3; // Number of posts to be displayed
-			for($x=0;$x<$limit;$x++) {
-				$title = str_replace(' & ', ' &amp; ', $feed[$x]['title']);
-				$description = $feed[$x]['desc'];
-				$date = date('j F', strtotime($feed[$x]['date']));
-				echo '<h2 class="smaller">'.$title.'</h2>';
-				echo '<p class="date">'.$date.'</p>';
-				echo '<p>'.strip_tags($description, '<p><b>').'</p><h2>...</h2>';
-			}
-		?>
-		<p>idg.se</p>
-		
-<a class="twitter-timeline" href="https://twitter.com/stemtosteam">Tweets by stemtosteam</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>		
-	</div>
+	
 	<div id="bottom">
 		<h3>
 		<?php // Depending on the hour of the day a different message is displayed.
