@@ -82,7 +82,7 @@ p.date {
 	}
 
 /* Image */
-resize {
+img.resize {
    max-width:350%;
    max-height:350%;
 }
