@@ -8,13 +8,13 @@
 	<link rel="stylesheet" href="style.css">
 	<link href='http://fonts.googleapis.com/css?family=Roboto:300' rel='stylesheet' type='text/css'>
 		<script language="JavaScript"> <!-- Getting the current date and time and updates them every second -->
-			setInterval(function() { 
+			setInterval(function() {
 				var currentTime = new Date ( );
-				var currentHours = currentTime.getHours ( );   
+				var currentHours = currentTime.getHours ( );
 				var currentMinutes = currentTime.getMinutes ( );
 				var currentMinutesleadingzero = currentMinutes > 9 ? currentMinutes : '0' + currentMinutes; // If the number is 9 or below we add a 0 before the number.
 				var currentDate = currentTime.getDate ( );
-	
+
 					var weekday = new Array(7);
 					weekday[0] = "Sunday";
 					weekday[1] = "Monday";
@@ -23,8 +23,8 @@
 					weekday[4] = "Thursday";
 					weekday[5] = "Friday";
 					weekday[6] = "Saturday";
-				var currentDay = weekday[currentTime.getDay()]; 
-	
+				var currentDay = weekday[currentTime.getDay()];
+
 					var actualmonth = new Array(12);
 					actualmonth[0] = "January";
 					actualmonth[1] = "February";
@@ -50,10 +50,10 @@
 	<div id="upper-left">
 		<div id="clock"></div> <!-- Including the date/time-script -->
 	</div>
-	
+
 	<div id="bottom">
 		<h3>
-		<?php 
+		<?php
 //Depending on the hour of the day a different message is displayed.
 			$now = date("H");
 				echo $now;
