@@ -80,9 +80,3 @@ p.date {
 	font-size: 12px;
 	font-weight: 600;
 	}
-
-/* Image */
-img.resize {
-   max-width:350%;
-   max-height:350%;
-}
