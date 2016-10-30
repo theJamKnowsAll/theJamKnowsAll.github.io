@@ -53,17 +53,23 @@
 
 	<div id="bottom">
 		<h3>
-			<?php
-$t = date("H");
-
-if ($t < "10") {
-    echo "Have a good morning!";
-} elseif ($t < "20") {
-    echo "Have a good day!";
-} else {
-    echo "Have a good night!";
-}
-?>
+	
+	<html> 
+	<body> 
+	<script type="text/javascript"> 
+		var d = new Date() 
+		var time = d.getHours() 
+		if (time > 06 && time < 10) {document.write("<b>Good Morning</b>")
+			} else if (time >= 10 && time < 12) {document.write("<b>Have a nice day!</b>")
+			} else if (time >= 12 && time < 14) {document.write("<b>Time for lunch!</b>")
+			} else if (time >= 14 && time < 17) {document.write("<b>Come and see!</b>")
+			} else if (time >= 17 && time < 20) {document.write("<b>Time to start to think about dinner?</b>")
+			} else if (time >= 20 && time < 22) {document.write("<b>Have a nice evening!</b>")
+			} else if (time >= 22 && time < 23) {document.write("<b>Sleep tight, see you tomorrow!</b>")
+			} else if (time >= 23 && time < 06) {document.write("<b>Shh, sleeping...</b>")
+	</script> 
+	</body> 
+	</html>	
 		
 		</h3>
 	</div>
